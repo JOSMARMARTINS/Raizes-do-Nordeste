@@ -1,4 +1,5 @@
-import { createBrowserRouter } from 'react-router';
+import { createHashRouter } from 'react-router';
+
 import { TelaAbertura } from './pages/TelaAbertura';
 import { TelaLogin } from './pages/TelaLogin';
 import { TelaCadastro } from './pages/TelaCadastro';
@@ -27,7 +28,7 @@ import { TelaAtendente } from './pages/TelaAtendente';
 import { TelaGerente } from './pages/TelaGerente';
 import { TelaNaoEncontrada } from './pages/TelaErro';
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   { path: '/', Component: TelaAbertura },
   { path: '/login', Component: TelaLogin },
   { path: '/register', Component: TelaCadastro },
