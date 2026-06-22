@@ -12,7 +12,7 @@ O objetivo do projeto foi criar uma experiência próxima de um aplicativo real,
 
 🌵 Acesse o projeto online:
 
-https://josmar.github.io/raizes-do-nordeste
+https://josmarmartins.github.io/Raizes-do-Nordeste/#/login
 
 
 ## 🥘 Funcionalidades
