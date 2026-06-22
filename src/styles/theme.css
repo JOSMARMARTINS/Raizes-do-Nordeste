@@ -1,0 +1,56 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-family-display: 'Baloo 2', sans-serif;
+  --background: #FFF4DC;
+  --background-alt: #F8EDD5;
+  --foreground: #4E342E;
+  --primary: #B94E2F;
+  --secondary: #C62828;
+  --muted: #795548;
+  --muted-foreground: #BCAAA4;
+  --accent: #F2B74B;
+  --border: #FFF0D0;
+  --border-subtle: rgba(185,78,47,0.15);
+  --destructive: #C62828;
+}
+
+.dark {
+  --background: #2C1A08;
+  --background-alt: #1A0C02;
+  --foreground: #FFF5E6;
+  --primary: #E8531A;
+  --secondary: #3A2410;
+  --muted: #C4925A;
+  --muted-foreground: #8B5A2B;
+  --accent: #FFB800;
+  --border: #5C3D1E;
+  --border-subtle: rgba(232,83,26,0.15);
+  --destructive: #C0392B;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-alt: var(--background-alt);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
+  --color-border-subtle: var(--border-subtle);
+  --color-destructive: var(--destructive);
+  --font-family-display: var(--font-family-display);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Nunito', sans-serif;
+  }
+}

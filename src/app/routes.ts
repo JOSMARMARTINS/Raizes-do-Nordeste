@@ -1,0 +1,58 @@
+import { createBrowserRouter } from 'react-router';
+import { TelaAbertura } from './pages/TelaAbertura';
+import { TelaLogin } from './pages/TelaLogin';
+import { TelaCadastro } from './pages/TelaCadastro';
+import { TelaRecuperarSenha } from './pages/TelaRecuperarSenha';
+import { TelaSelecaoLoja } from './pages/TelaSelecaoLoja';
+import { TelaSelecaoCanal } from './pages/TelaSelecaoCanal';
+import { TelaInicial } from './pages/TelaInicial';
+import { TelaCategorias } from './pages/TelaCategorias';
+import { TelaCardapio } from './pages/TelaCardapio';
+import { TelaDetalheProduto } from './pages/TelaDetalheProduto';
+import { TelaCarrinho } from './pages/TelaCarrinho';
+import { TelaCupons } from './pages/TelaCupons';
+import { TelaPagamento } from './pages/TelaPagamento';
+import { TelaConfirmacaoPedido } from './pages/TelaConfirmacaoPedido';
+import { TelaAcompanhamentoPedido } from './pages/TelaAcompanhamentoPedido';
+import { TelaFidelidade } from './pages/TelaFidelidade';
+import { TelaResgatarPontos } from './pages/TelaResgatarPontos';
+import { TelaPerfil } from './pages/TelaPerfil';
+import { TelaConfiguracoes } from './pages/TelaConfiguracoes';
+import { TelaLGPD } from './pages/TelaLGPD';
+import { PainelAdmin } from './pages/PainelAdmin';
+import { TelaGestaoUsuarios } from './pages/TelaGestaoUsuarios';
+import { TelaEditarPerfil } from './pages/TelaEditarPerfil';
+import { TelaMeusDados } from './pages/TelaMeusDados';
+import { TelaAtendente } from './pages/TelaAtendente';
+import { TelaGerente } from './pages/TelaGerente';
+import { TelaNaoEncontrada } from './pages/TelaErro';
+
+export const router = createBrowserRouter([
+  { path: '/', Component: TelaAbertura },
+  { path: '/login', Component: TelaLogin },
+  { path: '/register', Component: TelaCadastro },
+  { path: '/forgot-password', Component: TelaRecuperarSenha },
+  { path: '/store-selection', Component: TelaSelecaoLoja },
+  { path: '/channel-selection', Component: TelaSelecaoCanal },
+  { path: '/home', Component: TelaInicial },
+  { path: '/categories', Component: TelaCategorias },
+  { path: '/menu/:categoryId', Component: TelaCardapio },
+  { path: '/product/:id', Component: TelaDetalheProduto },
+  { path: '/cart', Component: TelaCarrinho },
+  { path: '/coupon', Component: TelaCupons },
+  { path: '/payment', Component: TelaPagamento },
+  { path: '/order-confirmation', Component: TelaConfirmacaoPedido },
+  { path: '/order-tracking', Component: TelaAcompanhamentoPedido },
+  { path: '/loyalty', Component: TelaFidelidade },
+  { path: '/redeem-points', Component: TelaResgatarPontos },
+  { path: '/profile', Component: TelaPerfil },
+  { path: '/profile/edit', Component: TelaEditarPerfil },
+  { path: '/my-data', Component: TelaMeusDados },
+  { path: '/settings', Component: TelaConfiguracoes },
+  { path: '/lgpd', Component: TelaLGPD },
+  { path: '/admin', Component: PainelAdmin },
+  { path: '/admin/users', Component: TelaGestaoUsuarios },
+  { path: '/atendente', Component: TelaAtendente },
+  { path: '/gerente', Component: TelaGerente },
+  { path: '*', Component: TelaNaoEncontrada },
+]);
